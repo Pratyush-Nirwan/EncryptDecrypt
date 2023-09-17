@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.1em;
+}
+::-webkit-scrollbar{
+    display: none;
+  }
+body {
+    margin: 0;
+    background-color: #ffd6ff;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#blur-div{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    animation: fade-in 0.8s forwards;
+    z-index: 9999;
+}
+#e-close-btn,#d-close-btn{
+    align-self: flex-end;
+}
+textarea{
+    background-color: #ffd6ff;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 25px;
+    resize: none;
+    padding: 10px;
+}
+
+input {
+    background-color: #ffd6ff;
+    border: 2px solid black;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0px 10px 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+#card-container {
+    display: flex;
+    flex-direction: row;
+    max-height: 90vh;
+}
+.card {
+    background-color: #bbd0ff;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2em;
+    margin: 2em;
+    box-shadow: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#encrypt-card, #decrypt-card{
+    animation: fade-in 0.8s forwards;
+}
+.card div{
+    padding-top: 10px;
+}
+#key-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#key-gen{
+    margin: 0;
+}
+#encrypt-card-text{
+    max-width: fit-content;
+}
+#key-text{
+    max-width: 200px;
+}
+#decrypt-card-text{
+    margin: 0;
+    margin-bottom: 10px;
+}
+#encrypt-textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#decrypt-textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#message-div *{
+    margin-top: 10px;
+}
+#encrypted-message, #key-gen{
+    max-width: 500px;
+    overflow: scroll;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 5px 0 5px;
+}
+#decrypted-message-card, #encrypted-message-card{
+    display: none;
+    animation: fade-in 0.8s forwards;
+
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+}
+#github{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 2em;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/*created by pratyush with ♡*/

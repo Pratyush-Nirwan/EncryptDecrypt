@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Decrypt</title>
+</head>
+<body>
+    <button id="github" class="fa-brands fa-github" ></button>
+    <div id="blur-div">
+        <div id="encrypted-message-card" class="card">
+            <button class="fa-solid fa-x" id="e-close-btn"></button>
+            <h1>Encrypted Message:</h1>
+            <div id="message-div">
+                <p id="encrypted-message"></p>
+                <button class="fa-solid fa-copy" id="encrypted-copy-btn"></button>
+            </div>
+            <div id="key-div">
+                <p><b>Key:</b><p id="key-gen"></p></p>
+                <button class="fa-solid fa-copy" id="key-copy-btn"></button>
+            </div>
+        </div>
+        <div id="decrypted-message-card" class="card">
+            <button class="fa-solid fa-x" id="d-close-btn"></button>
+            <h1>Decrypted Message:</h1>
+            <p id="decrypted-message"></p>
+            <button class="fa-solid fa-copy" id="decrypted-copy-btn"></button>
+        </div>
+    </div>
+    <div id="card-container">
+        <div id="encrypt-card" class="card">
+            <h1 id="name-tag">Encrypt</h1>
+            <div id="encrypt-textbox">
+                <textarea id="encrypt-card-text" placeholder="Message" cols="20" rows="10"></textarea>
+                <div id="encrypt-btn-div">
+                    <button class="fa-solid fa-lock" id="encrypt-btn"></button>
+                </div>
+            </div>
+        </div>
+        <div id="decrypt-card" class="card">
+            <h1 id="name-tag">Decrypt</h1>
+            <div id="decrypt-textbox">
+                <textarea id="decrypt-card-text" placeholder="Encrypted message" cols="20" rows="10"></textarea>
+                <input type="text" placeholder="Enter Key" id="key-text">
+            </div>
+            <div id="decrypt-btn-div">
+                <button class="fa-solid fa-lock-open" id="decrypt-btn"></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="javascript.js"></script>
+</body>
+<div id="footer">
+    <p>created by pratyush with ♡</p>
+</div>
+</html>
+
+<!--created by pratyush with ♡-->
