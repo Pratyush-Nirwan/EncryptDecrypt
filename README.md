@@ -1,83 +1,89 @@
-# Encrypt Decrypt Web Application
-Screenshot of website
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Demo](#demo)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [Authors](#authors)
+<p align="center">
+  <img src="public/favicon.png" width="100" />
+</p>
+<p align="center">
+    <h1 align="center">ENCRYPTDECRYPT</h1>
+</p>
 
-## Introduction
+<p align="center">
+	<img src="https://img.shields.io/github/license/Pratyush-Nirwan/EncryptDecrypt?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/Pratyush-Nirwan/EncryptDecrypt?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/Pratyush-Nirwan/EncryptDecrypt?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/Pratyush-Nirwan/EncryptDecrypt?style=flat&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+		<em>Developed with the software and tools below.</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=HTML5&logoColor=white" alt="HTML5">
+	<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=React&logoColor=black" alt="React">
+</p>
 
-The Encrypt Decrypt Web Application is a simple web tool that allows users to encrypt and decrypt messages using AES encryption with a randomly generated key. It provides a user-friendly interface for secure message handling.
 
-## Features
+## 🔗 Quick Links
+
+> - [📍 Overview](#-overview)
+> - [📦 Features](#-features)
+> - [🚀 Getting Started](#-getting-started)
+>   - [⚙️ Installation](#️-installation)
+>   - [🤖 Running EncryptDecrypt](#-running-EncryptDecrypt)
+> - [📄 License](#-license)
+> - [👏 Acknowledgments](#-acknowledgments)
+
+
+## 📍 Overview
+
+The Encrypt Decrypt Web Application features an intuitive user interface reminiscent of an operating system, providing a seamless experience for encrypting and decrypting messages. Powered by AES encryption with a randomly generated key, it ensures secure handling of sensitive information.
+
+## 📦 Features
 
 - **Message Encryption**: Encrypt any message with a randomly generated key.
 - **Message Decryption**: Decrypt an encrypted message using the correct key.
 - **Clipboard Copy**: Easily copy encrypted and decrypted messages, as well as encryption keys to the clipboard.
-- **User-Friendly Interface**: A clean and intuitive interface for a seamless user experience.
+- **OS like Interface**: A clean and intuitive operating system like interface for a seamless user experience.
 
-## Demo
-[Click here](https://pcoder.me/EncryptDecrypt/) to see a live demo of the Encrypt Decrypt Web Application.
+## 🚀 Getting Started
 
-## Getting Started
+### ⚙️ Installation
 
-To get a copy of this project up and running on your local machine, follow these steps:
+1. Clone the EncryptDecrypt repository:
 
-1. Clone the repository to your local machine:
+```sh
+git clone https://github.com/Pratyush-Nirwan/EncryptDecrypt
+```
 
-    ```bash
-    git clone https://github.com/pratyush-nirwan/EncryptDecrypt.git
-    ```
-2. Open the Project
+2. Change to the project directory:
 
-    Navigate to the project folder using your terminal or file explorer:
+```sh
+cd EncryptDecrypt
+```
 
-    ```bash
-    cd EncryptDecrypt
-    ```
-3. Launch the index.html file in your web browser.
+3. Install the dependencies:
 
-## Usage
+```sh
+npm install
+```
 
-**Encrypting a Message:**
+### 🤖 Running EncryptDecrypt
 
-1. Enter your message in the "Message" textbox.
-2. Click the "🔒" button.
-3. The encrypted message and encryption key will be displayed.
-4. You can copy the encrypted message and encryption key to your clipboard using the provided copy buttons.
+Use the following command to run EncryptDecrypt:
 
-**Decrypting a Message:**
+```sh
+npm start
+```
 
-1. Enter the encrypted message in the "Encrypted message" textbox.
-2. Enter the encryption key in the "Enter Key" textbox.
-3. Click the "🔓" button.
-4. The decrypted message will be displayed.
-5. You can copy the decrypted message to your clipboard using the provided copy button.
 
-## Technologies Used
+## 📄 License
 
-- HTML
-- CSS
-- JavaScript
-- [CryptoJS](https://cryptojs.gitbook.io/docs/)
+This project is protected under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
 
-## Contributing
 
-If you'd like to contribute to this project, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
-4. Push your changes to your fork.
-5. Create a pull request to the original repository.
+## 👏 Acknowledgments
 
-## Authors
+- The design of the dummy OS is inspired from Mac, Linux and Windows.
+- The encryption is handled using [CryptoJS](https://www.npmjs.com/package/crypto-js)
+- The draggable windows are a thing because of [react-draggable](https://www.npmjs.com/package/react-draggable)
 
-- Pratyush Nirwan
-
-This project was created with ❤️ by Pratyush Nirwan.
+[**Return**](#-quick-links)
