@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  background: #fda91e;
+  background-image: radial-gradient(at 85.0% 20.0%, hsl(241, 75%, 76%) 0px, transparent 50%), radial-gradient(at 80.0% 93.0%, hsl(293, 71%, 52%) 0px, transparent 50%), radial-gradient(at 98.0% 69.0%, hsl(161, 72%, 46%) 0px, transparent 50%), radial-gradient(at 2.0% 80.0%, hsl(294, 52%, 80%) 0px, transparent 50%), radial-gradient(at 67.0% 24.0%, hsl(230, 75%, 42%) 0px, transparent 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+#taskbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#programName {
+  font-family: "Pacifico", cursive;
+  font-size: 2em;
+  color: white;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  font-weight: 100;
+  mix-blend-mode: soft-light;
+  user-select: none;
+  z-index: -1;
+}
+
+#github-link {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+#github-link:hover {
+  text-decoration: underline;
+}
+
+#battery {
+  scale: 1.5;
+}
+
+#tb-left,
+#tb-right {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+#tb-left *,
+#tb-right * {
+  font-weight: 600;
+  margin: 0;
+}
+
+.tb-grp {
+  display: flex;
+  gap: 10px;
+}
+
+.tb-grp * {
+  margin: 0;
+}
+
+.terminal-name-div {
+  width: 100%;
+  height: 100%;
+}
+
+#encrypt-term {
+  z-index: 1;
+  top: 5%;
+  left: 5%;
+}
+
+#decrypt-term {
+  z-index: 2;
+  top: calc(5% + 25px);
+  left: calc(5% + 25px);
+}
+
+#about-term {
+  z-index: 3;
+  top: calc(5% + 50px);
+  left: calc(5% + 50px);
+}
+
+.terminal {
+  position: fixed;
+  display: flex;
+  width: 600px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.terminal-tb {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  justify-content: space-between;
+  cursor: move;
+}
+
+.terminal-content {
+  font-family: IBM Plex Mono, monospace;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+  color: white;
+}
+
+#e-input-1 h3,
+#d-input-1 h3,
+#d-input-2 h3 {
+  margin-bottom: 0;
+}
+
+.encrypted-msg {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  resize: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 5px;
+}
+
+#key {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+}
+
+#encryption-key {
+  background: transparent;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.close-btn {
+  scale: 1.5;
+  color: red;
+  height: 100%;
+  margin: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+.terminal-name-div {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+.terminal-icon {
+  scale: 1.2;
+}
+
+#apps {
+  position: fixed;
+  top: 100px;
+  right: 10%;
+  display: flex;
+  gap: 70px;
+}
+
+
+.icon-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  justify-content: center;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.icon-div:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-div h5 {
+  margin: 0;
+  font-weight: 500;
+  color: white;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+}
+
+.prompt {
+  font-weight: 100;
+}
+
+.terminal-content h5 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.loading-bar {
+  border: 1px solid white;
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.loading-progress {
+  height: 5px;
+  background: white;
+  animation: simulateLoading 3s linear;
+}
+
+.copyBtn {
+  display: flex;
+  width: fit-content;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-bottom: 0;
+}
+
+.copied {
+  margin-bottom: 0;
+}
+
+
+.copyBtn:hover {
+  opacity: 0.5;
+}
+
+#msg-output {
+  word-wrap: break-word;
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#key-output {
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.reset {
+  text-decoration: underline;
+  width: fit-content;
+  border-radius: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.reset:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#about-text p {
+  font-size: .8em
+}
+
+#about-text a {
+  color: white;
+}
+
+#about-text a:hover {
+  text-decoration: none;
+}
+
+#icon {
+  width: auto;
+  height: 300px;
+}
+
+@keyframes simulateLoading {
+  0% {
+    width: 0;
+  }
+
+  10% {
+    width: 30%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  70% {
+    width: 80%;
+  }
+
+  90% {
+    width: 85%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #taskbar {
+    font-size: 60%;
+  }
+
+  #time {
+    font-size: 110%;
+  }
+
+  #date {
+    display: none;
+  }
+
+  .tb-grp {
+    gap: 5px;
+  }
+
+  #tb-left,
+  #tb-right {
+    gap: 10px;
+  }
+
+  #apps {
+    position: fixed;
+    top: 100px;
+    right: unset;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
+
+  .terminal {
+    width: 300px;
+    height: 400px;
+  }
+
+  .close-btn {
+    scale: 1.5;
+  }
+
+  .copyBtn {
+    display: none;
+  }
+
+  .terminal-content {
+    overflow: auto;
+  }
+
+  #encrypt-term {
+    top: calc(50% + 50px);
+    left: -15%;
+  }
+
+  #decrypt-term {
+    top: calc(50% + 75px);
+    left: -15%;
+  }
+
+  #about-term {
+    top: calc(50% + 100px);
+    left: -15%;
+  }
+
+  #about-content {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #icon {
+    width: auto;
+    height: 40%;
+  }
+
+  #programName {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
